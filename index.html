@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+
+    <title>Конструктор</title>
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="http://gloarty.org/static/fonts/font-awesome-4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="http://gloarty.org/static/bootstrap/css/bootstrap.min.css">
+
+    <script src="js/jquery-3.1.1.js"></script>
+    <script src="js/social-likes.min.js"></script>
+
+    <script type="text/javascript" src="jquery.js"></script>
+  	<script type="text/javascript" src="jquery.maskedinput-1.2.2.js"></script>
+
+
+  </head>
+
+
+  <body class="landing">
+
+
+    <input type="checkbox" id="nav-toggle" hidden>
+    <nav class="nav">
+        <label for="nav-toggle" class="nav-toggle" onclick></label>
+        <!-- <h2 class="logo">
+            <a href="">logo here</a>
+        </h2> -->
+        <ul style=""> <!-- css in code -->
+            <li><a href="#1">Один</a>
+            <li><a href="#2">Два</a>
+            <li><a href="#3">Три</a>
+            <li><a href="#4">Четыре</a>
+            <li><a href="#5">Пять</a>
+            <li><a href="#6">Шесть</a>
+            <li><a href="#7">Семь</a>
+        </ul>
+    </nav>
+
+
+    <nav class="menubar" style="position: absolute;"> <!-- css in code -->
+      <!-- <div>
+        <h2 class="logo" href="">logo here</h2>
+      </div> -->
+
+      <nav class="step_bar">
+      </nav>
+        <div class="container">
+          <div class="step-progress-bar" style="width: 100%; left: 0;"> <!-- css in code -->
+            <ul class="progress-bar" style="width: 100%; background: transparent; height: auto; box-shadow: none;"> <!-- css in code -->
+              <li class="active">summary</li>
+              <li>test</li>
+              <li>your work</li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+
+
+    <section class="landingWrapper">
+      <section class="mainSection center">
+        <nav class="summary_check">
+          <div class="container" style="width: 100%; text-align: left;"> <!-- css in code -->
+            <div class="cv">
+              <div class="row">
+                <div class="col-xs-8">
+                  <div class="cv-block common">
+                    <h2 class="common-title input-click" data-html="<input id='name' name='name' placeholder='Иван Иванов' />">Иван Иванов</h2>
+                    <h3 class="common-subtitle input-click" data-html="<input id='position' name='position' placeholder='Желаемая должность' />">Желаемая должность</h3>
+                  </div>
+                  <div class="cv-block cv-block-summary">
+                    <h4 class="cv-block-title">Описание</h4>
+                    <p class="input-click" data-html="<textarea id='summary' name='summary' placeholder='Опишите здесь коротко ваши цели (хз, что здесь нужен за текст)'></textarea>">Опишите здесь коротко ваши цели (хз, что здесь нужен за текст)</p>
+                  </div>
+                  <div class="cv-block cv-block-exp">
+                    <h4 class="cv-block-title">Опыт работы</h4>
+                    <div class="cv-block-exp-item">
+                      <h4 class="cv-block-item-title"><span class="input-click" data-html="<input name='prev-position' placeholder='Должность' />">Должность</span> / <span class="cv-block-exp-item-title-company input-click" data-html="<input name='rev-position' placeholder='Компания' />">Компания</span> / <span class="cv-block-exp-item-title-location location input-click" data-html="<input name='prev-position' placeholder='Город, Страна' />">Город, Страна</span></h4>
+                      <p class="cv-block-item-date">
+                        <span class="input-click" data-html="<input name='job-start' type='month' />">Январь, 2018</span> - <span class="input-click" data-html="<input name='job-end' type='month' />">Январь 2018</span>
+                      </p>
+                      <p class="cv-block-item-desc input-click" data-html="<textarea id='job-desc' name='job-desc' placeholder='Опишите здесь коротко ваши цели (хз, что здесь нужен за текст)'></textarea>">Опишите здесь коротко ваши цели (хз, что здесь нужен за текст)</p>
+                    </div>
+                  </div>
+                  <div class="cv-block cv-block-ed">
+                    <h4 class="cv-block-title">Образование</h4>
+                    <div class="cv-block-ed-item">
+                      <h4 class="cv-block-item-title"><span class="cv-block-ed-item-title-uni input-click" data-html="<input name='uni-name' placeholder='Названиие университета' />">Название университета</span>, <span class="cv-block-ed-item-title-location location input-click" data-html="<input name='uni-location' placeholder='Город, страна' />">Город, Страна</span></h4>
+                      <h4 class="cv-block-item-subtitle"><span class="cv-block-ed-item-spec input-click" data-html="<input name='uni-spec' placeholder='Специализация' />">Специализация</span>, <span class="cv-block-ed-item-degree input-click" data-html="<input name='uni-degree' placeholder='Степень' />">Степень</span></h4>
+                      <p class="cv-block-item-date">
+                        <span class="input-click" data-html="<input name='ed-start' type='month' />">Январь 2018</span> - <span class="input-click" data-html="<input name='ed-end' type='month' />">Январь 2018</span>
+                      </p>
+                    </div>
+                  </div>
+                  <div class="cv-block cv-block-project">
+                    <h4 class="cv-block-title">Проекты</h4>
+                    <div class="cv-block-project-item">
+                      <h4 class="cv-block-item-title input-click" data-html="<input name='project-name' placeholder='Название проекта' />">Название проекта</h4>
+                      <p class="cv-block-item-date">
+                        <span class="input-click" data-html="<input name='project-start' type='month' />">Январь 2018</span> - <span class="input-click" data-html="<input name='project-end' type='month' />">Январь 2018</span></p>
+                      <p class="cv-block-item-desc input-click" data-html="<textarea name='project-desc' placeholder='Опишите вашу роль и вклад в проект'></textarea>">Опишите вашу роль и вклад в проект</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-xs-4">
+                  <div class="cv-block cv-block-contact">
+                    <h4 class="address"><span class="city input-click" data-html="<input name='city' placeholder='Москва' />">Москва</span>, <span class="country input-click" data-html="<input name='country' placeholder='Россия' />">Россия</span></h4>
+
+                      <!-- проверка номера телефона и емейл -->
+
+                        <!-- <h4 class="email input-click" data-html="<input name='email' type='email' placeholder='example@example.com' />">example@example.com</h4>
+                        <h4 class="phone input-click" data-html="<input name='phone' placeholder='+7 (950) 000-00-00' />">+7 (950) 000-00-00</h4> -->
+                        <!-- <p id="message" >Пожалуйста, заполните все поля формы!</p> -->
+
+
+                        <!-- E-mail: <input id="email" name="email" type="text" size="20" style="margin-top: 0%;"/><br /> -->
+                        <!-- Телефон: <input id="phone" name="phone" type="text" size="20" style=" margin-top: 3%;"/><br />
+                        <input name="button" type="submit" value="Проверить" onClick="ValidMail(); ValidPhone();" style=" margin-top: 3%;"/> -->
+
+                        <table border="0">
+                        <tbody>
+                        <td>Номер телефона</td>
+                        <td><input id="phone" type="text" tabindex="3" /></td>
+                        <td></td>
+                        </tr>
+                        </tbody>
+                        </table>
+
+                  </div>
+                  <div class="cv-block cv-block-skills">
+                    <h4 class="cv-block-title">Навыки</h4>
+                    <p class="input-click" data-html="<textarea name='skills' placeholder='Перечислите свои навыки через запятую'></textarea>">Перечислите свои навыки через запятую</p>
+                  </div>
+                  <div class="cv-block cv-block-awards">
+                    <h4 class="cv-block-title">Достижения</h4>
+                    <div class="cv-block-awards-item">
+                      <h4 class="cv-block-item-title input-click" data-html="<input name='achieve-name' placeholder='Заголовок' />">Заголовок</h4>
+                      <p class="cv-block-item-desc input-click" data-html="<textarea name='achieve-desc' placeholder='Кратко опишите суть'></textarea>">Опишите кратко суть</p>
+                    </div>
+                  </div>
+                  <div class="cv-block cv-block-lang">
+                    <h4 class="cv-block-title">Владение языками</h4>
+                    <p class="lang-item"><span class="lang-item-name input-click" data-html="<input name='lang-name' placeholder='English' />">English</span> - <span class="lang-item-level input-click" data-html="<select name='lang-level'><option val='A1-A2'>A1-A2</option><option val='B1'>B1</option><option val='B2'>B2</option><option val='C1'>C1</option><option val='C2'>C2</option></select>">B2</span></p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </nav>
+
+
+
+
+
+        <!-- проверка номера и емейл -->
+
+
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+        <!-- <script type="text/javascript">
+
+        function ValidMail() {
+          var re = /^[\w-\.]+@[\w-]+\.[a-z]{2,4}$/i;
+          var myMail = document.getElementById('email').value;
+          var valid = re.test(myMail);
+          if (valid) output = 'Адрес эл. почты введен правильно!';
+          else output = 'Адрес электронной почты введен неправильно!';
+          document.getElementById('message').innerHTML = output;
+          return valid;
+        }
+
+          function ValidPhone() {
+          var re = /^\d[\d\(\)\ -]{4,14}\d$/;
+          var myPhone = document.getElementById('phone').value;
+          var valid = re.test(myPhone);
+          if (valid) output = 'Номер телефона введен правильно!';
+          else output = 'Номер телефона введен неправильно!';
+          document.getElementById('message').innerHTML = document.getElementById('message').innerHTML+'<br />'+output;
+          return valid;
+        }
+      </script> -->
+
+
+
+
+
+
+        <!-- <section>
+          <nav class="btn_large">
+            <a class="btn large green" href=""></a>
+          </nav>
+        </section> -->
+
+      </section>
+    </section>
+
+
+    <nav class="btn_large">
+        <a class="btn large green" href=""></a>
+      </nav>
+
+    <!-- Кнопки для инструментария -->
+     <nav class="tools" style="">
+         <div id="container">
+           <button class="shrink"> shrink</button>
+           <button class="shrink"> shrink</button>
+           <button class="shrink"> Shrink</button>
+           <button class="shrink"> Shrink</button>
+           <button class="shrink"> Shrink</button>
+         </div>
+       </nav>
+
+
+
+
+
+
+
+
+
+
+
+    <script>
+      $('.input-click').click(function() {
+        if (($(this).find('input').length == 0) && ($(this).find('textarea').length == 0) && ($(this).find('select').length == 0)) {
+          var val = $(this).html();
+          var html = $(this).attr('data-html');
+          $(this).html(html);
+          $(this).children().val(val);
+        }
+      });
+      $('.cv').on('focusout', 'input', function() {
+        var val = $(this).val();
+        $(this).parent().html(val);
+      });
+      $('.cv').on('focusout', 'textarea', function() {
+        var val = $(this).val();
+        $(this).parent().html(val);
+      });
+      $('.cv').on('focusout', 'select', function() {
+        var val = $(this).val();
+        $(this).parent().html(val);
+      });
+    </script>
+  </body>
+
+
+
+  <!-- <p id="message" >Пожалуйста, заполните все поля формы!</p>
+  E-mail: <input id="email" name="email" type="text" size="20" style="
+    z-index:  6;
+    position:  absolute;
+    margin-left: 74%;
+    margin-top: -48%;
+">><br/> -->
+
+
+    <script type="text/javascript">
+    jQuery(function($) {
+  $.mask.definitions['~']='[+-]';
+  $('#phone').mask('(999) 999-9999');
+});</script>
+
+  </body>
+
+</html>

@@ -1,0 +1,15 @@
+.summary_check {
+  width: 60%;
+  background-color: black;
+}
+
+.summary_check {
+  background-color: #F0F0F0;
+  margin-top: 150px;
+  margin-left: auto;
+  margin-right: auto;
+  z-index: 1;
+  width: 50%;
+  height: 85%;
+  min-width: 680px;
+}
