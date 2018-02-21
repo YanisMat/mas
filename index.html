@@ -10,11 +10,11 @@
     <link rel="stylesheet" href="http://gloarty.org/static/fonts/font-awesome-4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="http://gloarty.org/static/bootstrap/css/bootstrap.min.css">
 
+    <script type="text/javascript" src="js/jquery.js"></script>
+  	<script type="text/javascript" src="js/jquery.maskedinput-1.2.2.js"></script>
+
     <script src="js/jquery-3.1.1.js"></script>
     <script src="js/social-likes.min.js"></script>
-
-    <script type="text/javascript" src="jquery.js"></script>
-  	<script type="text/javascript" src="jquery.maskedinput-1.2.2.js"></script>
 
 
   </head>
@@ -111,8 +111,8 @@
 
                       <!-- проверка номера телефона и емейл -->
 
-                        <!-- <h4 class="email input-click" data-html="<input name='email' type='email' placeholder='example@example.com' />">example@example.com</h4>
-                        <h4 class="phone input-click" data-html="<input name='phone' placeholder='+7 (950) 000-00-00' />">+7 (950) 000-00-00</h4> -->
+                        <h4 class="email input-click" data-html="<input name='email' type='email' placeholder='example@example.com' />">example@example.com</h4>
+                        <h4 class="phone input-click" data-html="<input id='phone' name='phone' placeholder='+7 (950) 000-00-00' size='20' />">+7 (950) 000-00-00</h4>
                         <!-- <p id="message" >Пожалуйста, заполните все поля формы!</p> -->
 
 
@@ -120,14 +120,14 @@
                         <!-- Телефон: <input id="phone" name="phone" type="text" size="20" style=" margin-top: 3%;"/><br />
                         <input name="button" type="submit" value="Проверить" onClick="ValidMail(); ValidPhone();" style=" margin-top: 3%;"/> -->
 
-                        <table border="0">
+                        <!--<table border="0">
                         <tbody>
                         <td>Номер телефона</td>
                         <td><input id="phone" type="text" tabindex="3" /></td>
                         <td></td>
                         </tr>
                         </tbody>
-                        </table>
+                      </table>-->
 
                   </div>
                   <div class="cv-block cv-block-skills">
@@ -213,16 +213,6 @@
          </div>
        </nav>
 
-
-
-
-
-
-
-
-
-
-
     <script>
       $('.input-click').click(function() {
         if (($(this).find('input').length == 0) && ($(this).find('textarea').length == 0) && ($(this).find('select').length == 0)) {
@@ -230,11 +220,29 @@
           var html = $(this).attr('data-html');
           $(this).html(html);
           $(this).children().val(val);
+          $(this).children().attr('data-default', val);
+
+          $('.cv').on('change', 'input[name="phone"]', function() {
+              $(this).val($(this).val().replace(/\D/g,''));
+              console.log($(this).val());
+              if ($(this).val().length < 11) {
+                var d = 11 - $(this).val().length
+                for (var i=0; i<d; i++) {
+                  $(this).val($(this).val()+'0');
+                }
+              }
+              var x = $(this).val().match(/(\d{1})(\d{3})(\d{3})(\d{2})(\d{2})/);
+              $(this).val('+'+ x[1] + ' (' + x[2] + ') ' + x[3] + '-' + x[4] + '-' + x[5]);
+          })
         }
       });
       $('.cv').on('focusout', 'input', function() {
         var val = $(this).val();
-        $(this).parent().html(val);
+        if ($(this).val() != '') {
+          $(this).parent().html(val);
+        } else {
+          $(this).parent().html($(this).attr('data-default'));
+        }
       });
       $('.cv').on('focusout', 'textarea', function() {
         var val = $(this).val();
@@ -258,11 +266,12 @@
 ">><br/> -->
 
 
-    <script type="text/javascript">
+    <!--<script type="text/javascript">
     jQuery(function($) {
-  $.mask.definitions['~']='[+-]';
-  $('#phone').mask('(999) 999-9999');
-});</script>
+      $.mask.definitions['~']='[+-]';
+      $('#phone').mask('(999) 999-9999');
+    });
+  </script>-->
 
   </body>
 
