@@ -1,32 +1,69 @@
-<!-- <!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8">
-    <title></title>
-    <script src="js/test.js"></script>
-  </head>
-  <body>
-    <form method="GET" action="#">
-     <div id="parentId">
-     <div>
-     <input name="name_1" type="text" />
-     <a onclick="return deleteField(this)" href="#">[X]</a>
-     </div>
-     </div>
-     <input class="s" type="submit" value="GO!" />
-    </form>
-    <a onclick="return addField()" href="#">Добавить поле</a>
-  </body>
+
+
+<!-- <html>
+<head>
+<title>add block</title>
+<script language="javascript">
+var countOfFields = 1; // Текущее число полей
+var curFieldNameId = 1; // Уникальное значение для атрибута name
+var maxFieldLimit = 5; // Максимальное число возможных полей
+function deleteField(a) {
+ // Получаем доступ к ДИВу, содержащему поле
+ var contDiv = a.parentNode;
+ // Удаляем этот ДИВ из DOM-дерева
+ contDiv.parentNode.removeChild(contDiv);
+ // Уменьшаем значение текущего числа полей
+ countOfFields--;
+ // Возвращаем false, чтобы не было перехода по сслыке
+ return false;
+}
+function addField() {
+ // Проверяем, не достигло ли число полей максимума
+ if (countOfFields >= maxFieldLimit) {
+ alert("Число полей достигло своего максимума = " + maxFieldLimit);
+ return false;
+ }
+ // Увеличиваем текущее значение числа полей
+ countOfFields++;
+ // Увеличиваем ID
+ curFieldNameId++;
+ // Создаем элемент ДИВ
+ var div = document.createElement("div");
+ // Добавляем HTML-контент с пом. свойства innerHTML
+ div.innerHTML = "<input name="name_" + curFieldNameId + "" type="text" /> <a onclick="return deleteField(this)" href="#">[X]</a>";
+ // Добавляем новый узел в конец списка полей
+ document.getElementById("parentId").appendChild(div);
+ // Возвращаем false, чтобы не было перехода по сслыке
+ return false;
+}
+</script>
+</head>
+<body>
+  <form method="GET" action="#">
+   <div id="parentId">
+   <div>
+   <input name="name_1" type="text" />
+   <a onclick="return deleteField(this)" href="#">[X]</a>
+   </div>
+   </div>
+   <input class="s" type="submit" value="GO!" />
+  </form>
+  <a onclick="return addField()" href="#">Добавить поле</a>
+</body>
 </html> -->
+
+
+
 
 <html>
 <head>
 <title>add block</title>
 <script language="javascript">
-var items=1; // текущее число полей
-// var countOfFields = 1; // Текущее число полей
-// var curFieldNameId = 1; // Уникальное значение для атрибута name
-// var maxFieldLimit = 5; // Максимальное число возможных полей
+// var items=1; // текущее число полей
+var countOfItem = 1; // Текущее число полей
+var curItemNameId = 1; // Уникальное значение для атрибута name
+var maxItemLimit = 5; // Максимальное число возможных полей
+
 function AddItem() {
   div=document.getElementById("items");
   button=document.getElementById("add");
@@ -37,13 +74,34 @@ function AddItem() {
   newnode=document.createElement("span");
   newnode.innerHTML=newitem;
   div.insertBefore(newnode,button);
+
+  // Проверяем, не достигло ли число полей максимума
+ if (countOfItem >= maxItemLimit)
+ alert("Число полей достигло своего максимума = " + maxItemLimit);
+ return false;
 }
+
+
+function deleteItem(a) {
+ // Получаем доступ к ДИВу, содержащему поле
+ var contDiv = a.parentNode;
+ // Удаляем этот ДИВ из DOM-дерева
+ contDiv.parentNode.removeChild(contDiv);
+ // Уменьшаем значение текущего числа полей
+ countOfFields--;
+ // Возвращаем false, чтобы не было перехода по сслыке
+ return false;
+}
+
+
+
 </script>
 </head>
 <body>
 <form name="form1">
 <div ID="items">
 <strong>Поле 1: </strong><input type="text" name="item1" size="45"><br>
+<a onclick="return deleteField(this)" href="#">[X]</a>
 <input type="button" value="Добавить поле" onClick="AddItem();" ID="add">
 </div>
 </form>
