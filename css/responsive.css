@@ -26,10 +26,10 @@
   }
 }
 
-@media only screen and (min-device-width: 320px) and (max-device-width: 480px) and (orientation: portrait) {
+/* @media only screen and (min-device-width: 320px) and (max-device-width: 480px) and (orientation: portrait) {
   body {
     min-width: 320px;
-  }
+  } */
 
   article > *:not(section) {
     width: calc(100% - 40px);

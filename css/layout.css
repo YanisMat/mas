@@ -30,7 +30,7 @@ body {
 
 body.posts,
 body.landing {
-  background-color: #FAFAFA;
+  /* background-color: #FAFAFA; */
 }
 
 body.posts .menubar,

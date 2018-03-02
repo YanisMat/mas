@@ -28,7 +28,8 @@ ul.progress-bar {
 .step-progress-bar li {
  list-style-type: none;
  float: left;
- color: #58b89d;
+ /* color: #58b89d; цвет как был лазурный у текста */
+ color: black;
  width: 33.33%;
  position: relative;
  text-align: center;
